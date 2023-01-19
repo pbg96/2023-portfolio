@@ -1,13 +1,229 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*
+===============
+VARIABLES
+===============
+*/
+
+:root {
+  --clr-primary: rgba(250, 250, 250, 1);
+  --clr-primary-light: rgba(255, 255, 255, 1);
+  --clr-primary-dark: rgba(199, 199, 199, 1);
+  --clr-secondary: rgb(34, 34, 34);
+  --clr-secondary-light: rgba(72, 72, 72, 1);
+  --clr-secondary-dark: rgba(0, 0, 0, 1);
+  --clr-error: rgba(183, 28, 28, 1);
+  --clr-error-light: rgba(240, 85, 69, 1);
+  --clr-error-dark: rgba(127, 0, 0, 1);
+  --clr-success: rgba(27, 94, 32, 1);
+  --clr-success-light: rgba(76, 140, 74, 1);
+  --clr-success-dark: rgba(0, 51, 0, 1);
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*
+===============
+GLOBAL STYLES
+===============
+*/
+
+body {
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+/* LINKS */
+
+a {
+  text-decoration: none;
+  color: var(--clr-secondary-light);
+}
+
+/* RESET */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+===============
+FONTS
+===============
+*/
+@import url("https://use.typekit.net/fzq4wdq.css");
+
+/* TYPOGRAPHY SCALE */
+
+.logotype {
+  font-family: 'Roc Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 80px;
+  letter-spacing: -1px;
+}
+
+.display-2xl {
+  font-family: 'Roc Grotesk', sans-serif; 
+  font-style: normal;
+  font-weight: 400;
+  font-size: 138px;
+  letter-spacing: -1px;
+}
+
+.display-xl {
+  font-family: 'Roc Grotesk', sans-serif; 
+  font-weight: 400;
+  font-size: 105px;
+  letter-spacing: -1px;
+}
+
+.display-lg {
+  font-family: 'Roc Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  letter-spacing: -px;
+}
+
+.display-md {
+  font-family: 'Roc Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 61px;
+  letter-spacing: -.5px;
+}
+
+.display-sm {
+  font-family: 'Roc Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 47px;
+  letter-spacing: -.5px;
+}
+
+.display-xs {
+  font-family: 'Roc Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  letter-spacing: -.5px;
+}
+
+.main-text {
+  font-family: 'Neue Haas Grotesk Display', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1rem;
+  text-transform: uppercase;
+  letter-spacing: -.25px;
+}
+
+
+.body-1 {
+  font-family: Libre Franklin, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.subtitle-text {
+  font-family: IBM Plex Mono, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.button-text {
+  font-family: IBM Plex Mono, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.body-2 {
+  font-family: Libre Franklin, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.caption-text {
+  font-family: Libre Franklin, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+}
+
+.overline-text {
+  font-family: IBM Plex Mono, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.body-3 {
+  font-family: Libre Franklin, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 12px;
+}
+
+.label-text {
+  font-family: Libre Franklin, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+}
+
+.logo-text {
+  font-family: futura-pt,'Libre Franklin', sans-serif;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+/*
+===============
+COMPONENTS
+===============
+*/
+
+/*
+===============
+LAYOUTS
+===============
+*/
+
+/* HEADER */
+
+.header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* HERO */
+
+.hero {
+  background-image: url(https://images.pexels.com/photos/430207/pexels-photo-430207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  height: 70vh;
+  width: 100vw;
+  position: sticky;
+  z-index: -1;
+}
+
+/* ABOUT */
+
+.about {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
